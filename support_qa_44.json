@@ -1,0 +1,49 @@
+{
+  "predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "context": "Two-factor authentication can be enabled from Security Settings.",
+        "question": "How do I enable 2FA?",
+        "reasoning": "Not supplied for this particular example.",
+        "answer": "Two-factor authentication can be enabled from Security Settings."
+      },
+      {
+        "context": "Refunds are processed within 5 to 7 business days after approval.",
+        "question": "How long does a refund take?",
+        "answer": "Refunds are processed within 5 to 7 business days after approval."
+      }
+    ],
+    "signature": {
+      "instructions": "Customer support answer grounded in knowledge base.",
+      "fields": [
+        {
+          "prefix": "Context:",
+          "description": "Context from docs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "user question"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Answer:",
+          "description": "Concise bullet-point answer using ONLY the context. If not found, say: I don't know based on the provided information."
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "3.1.3",
+      "cloudpickle": "3.1"
+    }
+  }
+}
